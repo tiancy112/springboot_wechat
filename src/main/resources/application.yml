@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost/wenxin_test?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  
+    
+
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: config   # 指定远程配置文件服务器
+
+
+server:
+  port: 8099
+
+

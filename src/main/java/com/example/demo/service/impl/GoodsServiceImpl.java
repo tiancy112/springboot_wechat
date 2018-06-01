@@ -27,7 +27,7 @@ public class GoodsServiceImpl implements GoodsService{
 	}
 
 	@Override
-	public Goods findById(String id) {
+	public Goods findById(Integer id) {
 		// TODO Auto-generated method stub
 		return goodsRepository.findOne(id);
 	}
@@ -39,7 +39,7 @@ public class GoodsServiceImpl implements GoodsService{
 	}
 
 	@Override
-	public void delete(String id) {
+	public void delete(Integer id) {
 		// TODO Auto-generated method stub
 		goodsRepository.delete(id);;;
 	}

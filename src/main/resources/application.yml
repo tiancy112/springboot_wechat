@@ -3,20 +3,38 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
-    url: jdbc:mysql://localhost/wenxin_test?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://localhost:3306/wenxin_test?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
+#  jackson:
+#    #如果属性为NULL则不参与序列化
+#    default-property-inclusion: non_null
+  redis:
+    host: localhost
+    port: 6379
   
-    
 
-#  cloud:
-#    config:
-#      discovery:
-#        enabled: true
-#        service-id: config   # 指定远程配置文件服务器
 
 
 server:
   port: 8099
+#  context-path: /sell
+  
+#wechat:
+#  mpAppId: xx
+#  mpAppSecret: xx
+#  openAppId: xx
+#  openAppSecret: xx
+#  mchId: xx
+#  mchKey: xx
+#  keyPath: /var/weixin_cert/h5.p12
+#  notifyUrl: http://sell.example.com/sell/pay/notify
+#  templateId:
+#    orderStatus: e-Cqq67QxD6YNI41iRiqawEYdFavW_7pc7LyEMb-yeM
+#
+#projectUrl:
+#  wechatMpAuthorize: http://sell.example.com
+#  wechatOpenAuthorize: http://sell.example.com
+#  sell: http://sell.example.com
 
 

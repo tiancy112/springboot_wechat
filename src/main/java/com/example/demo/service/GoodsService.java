@@ -10,10 +10,10 @@ public interface GoodsService{
 	
 	Goods save(Goods goods);
 	
-	Goods findById(String id);
+	Goods findById(Integer id);
 	
 	Goods update(Goods goods);
 	
-	void delete(String id);
+	void delete(Integer id);
 
 }

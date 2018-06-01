@@ -21,7 +21,7 @@ public class GoodsController {
 	@Autowired
 	private GoodsService goodsService;
 	
-	   @GetMapping(value = "/goodslist")
+	   @GetMapping(value = "goodslist")
 	    private Map<String, Object> goodslist() {
 	        Map<String, Object> modelMap = new HashMap<String, Object>();
 	        List<Goods> goodslist = goodsService.findAll();
@@ -30,7 +30,7 @@ public class GoodsController {
 	    }
 	   
 	   @GetMapping(value = "/findById")
-	    private Map<String, Object> findById(String id) {
+	    private Map<String, Object> findById(Integer id) {
 	        Map<String, Object> modelMap = new HashMap<String, Object>();
 	       Goods goods = goodsService.findById(id);
 	        modelMap.put("goods", goods);
@@ -45,7 +45,7 @@ public class GoodsController {
 	    @PostMapping(value = "/addgoods")
 	    private Map<String, Object> addArea(@RequestBody Goods goods) {
 	        Map<String, Object> modelMap = new HashMap<String, Object>();
-	        goods.setId(UUID.randomUUID().toString());
+//	        goods.setId(UUID.randomUUID().toString());
 	        Goods goods1 = goodsService.save(goods);
 	        Boolean isSuccess=goods1==null?false:true;
 	        modelMap.put("success", isSuccess);
@@ -74,8 +74,8 @@ public class GoodsController {
 	     * @param area
 	     * @return
 	     */
-	    @DeleteMapping(value = "/deletegoods")
-	    private Map<String, Object> deletegoods(String id) {
+	    @GetMapping(value = "/deletegoods")
+	    private Map<String, Object> deletegoods(Integer id) {
 	        Map<String, Object> modelMap = new HashMap<String, Object>();
 //	        goods.setId(UUID.randomUUID().toString());
 	         goodsService.delete(id);

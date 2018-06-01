@@ -3,11 +3,13 @@ package com.example.demo.bean;
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 @Entity
 public class Goods {
 	@Id
-    private String id;
+	@GeneratedValue
+    private Integer id;
 
     private String goodsName;
 
@@ -17,15 +19,16 @@ public class Goods {
 
     private String goodsDesc;
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
-    }
+    public Integer getId() {
+		return id;
+	}
 
-    public String getGoodsName() {
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getGoodsName() {
         return goodsName;
     }
 
